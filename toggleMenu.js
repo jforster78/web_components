@@ -63,7 +63,7 @@ class toggleMenu extends HTMLElement {
         }
         @media only screen and (min-width: 900px) {
           .header__navitem--left {
-            padding: 1.4rem 0 1rem 1rem;
+            padding: 1rem 0 1rem 1rem;
             flex-grow: 1;
           }
         }
@@ -100,7 +100,7 @@ class toggleMenu extends HTMLElement {
           position: absolute;
           cursor: pointer;
           right: 1rem;
-          top: 1.1rem;
+          top: 0.5rem;
           font-size: 1.5rem;
           display: block;
         }
@@ -132,6 +132,7 @@ class toggleMenu extends HTMLElement {
         }
       </style>
 
+      //HTML Structure
       <header class="header">
         <nav class="header__nav">
           <div class="header__navbutton">
@@ -140,7 +141,7 @@ class toggleMenu extends HTMLElement {
             <div class="header__navbar3"></div>
           </div>
           <ul class="header__navlist">
-            <li class="header__navitem header__navitem--left"><a href="index.html" class="header__link"><h1 class="header__h1">JF Web</h1></a></li>
+            <li class="header__navitem header__navitem--left"><a href="index.html" class="header__link"><h1 class="header__h1">Brand</h1></a></li>
             <li class="header__navitem"><a class="header__navlink" href="#help">Services</a></li>
             <li class="header__navitem"><a class="header__navlink" href="#portfolio">Portfolio</a></li>
             <li class="header__navitem"><a class="header__navlink" href="#process">Process</a></li>
@@ -149,22 +150,22 @@ class toggleMenu extends HTMLElement {
         </nav>
       </header>`;
 
-    //Build the menu toggle
-    const buildTheToggle = () => {
-      const navs = this._root.querySelectorAll(".header__navlink");
-      navs.forEach(nav => nav.classList.toggle("header__navshow"));
-    };
-    //Build the menu button animation
-    const toggleButton = () => {
-      const bars = this._root.querySelector(".header__navbutton");
-      bars.classList.toggle("header__navbutton--change");
-    };
-    //Toggles menu opened/closed
-    const toggleEventListener = this._root.querySelector(".header__navbutton");
-    toggleEventListener.addEventListener("click", () => {
-      buildTheToggle();
-      toggleButton();
-    });
+      //Build the menu toggle
+      const buildTheToggle = () => {
+        const navs = this._root.querySelectorAll(".header__navlink");
+        navs.forEach(nav => nav.classList.toggle("header__navshow"));
+      };
+      //Build the menu button animation
+      const toggleButton = () => {
+        const bars = this._root.querySelector(".header__navbutton");
+        bars.classList.toggle("header__navbutton--change");
+      };
+      //Toggles menu opened/closed
+      const toggleEventListener = this._root.querySelector(".header__navbutton");
+      toggleEventListener.addEventListener("click", () => {
+        buildTheToggle();
+        toggleButton();
+      });
   }
 }
 customElements.define("toggle-menu", toggleMenu);
