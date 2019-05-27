@@ -51,19 +51,14 @@ class toggleMenu extends HTMLElement {
         .header__navitem {
           font-family: "subHeadings", serif;
         }
-        @media only screen and (min-width: 900px) {
-          .header__navitem {
-            padding: 0.5rem 0 0;
-          }
-        }
         .header__navitem--left {
           font-family: "title", cursive;
           color: #fff;
-          padding: 0.75rem 1rem;
+          padding: .75rem 1rem;
         }
         @media only screen and (min-width: 900px) {
           .header__navitem--left {
-            padding: 1rem 0 1rem 1rem;
+            padding: 1.5rem 0 1.5rem 1rem;
             flex-grow: 1;
           }
         }
@@ -85,7 +80,7 @@ class toggleMenu extends HTMLElement {
           .header__navlink {
             display: block;
             border-bottom: none;
-            padding: 1.5rem 1rem;
+            padding: 2rem 1rem;
           }
           .header__navlink:hover {
             color: #191919;
@@ -100,7 +95,7 @@ class toggleMenu extends HTMLElement {
           position: absolute;
           cursor: pointer;
           right: 1rem;
-          top: 0.5rem;
+          top: .8rem;
           font-size: 1.5rem;
           display: block;
         }
@@ -132,7 +127,6 @@ class toggleMenu extends HTMLElement {
         }
       </style>
 
-      //HTML Structure
       <header class="header">
         <nav class="header__nav">
           <div class="header__navbutton">
@@ -141,15 +135,15 @@ class toggleMenu extends HTMLElement {
             <div class="header__navbar3"></div>
           </div>
           <ul class="header__navlist">
-            <li class="header__navitem header__navitem--left"><a href="index.html" class="header__link"><h1 class="header__h1">Brand</h1></a></li>
-            <li class="header__navitem"><a class="header__navlink" href="#help">Services</a></li>
-            <li class="header__navitem"><a class="header__navlink" href="#portfolio">Portfolio</a></li>
-            <li class="header__navitem"><a class="header__navlink" href="#process">Process</a></li>
-            <li class="header__navitem"><a class="header__navlink header__navlink--noborder" href="#contact">Contact</a></li>
+            <li class="header__navitem header__navitem--left"><a href="index.html" class="header__link"><h1 class="header__h1">JF Web</h1></a></li>
+            <li class="header__navitem"><a class="header__navlink" href="index.html#help">Services</a></li>
+            <li class="header__navitem"><a class="header__navlink" href="index.html#portfolio">Portfolio</a></li>
+            <li class="header__navitem"><a class="header__navlink" href="index.html#process">Process</a></li>
+            <li class="header__navitem"><a class="header__navlink header__navlink--noborder" href="index.html#contact">Contact</a></li>
           </ul>
         </nav>
       </header>`;
-
+    
       //Build the menu toggle
       const buildTheToggle = () => {
         const navs = this._root.querySelectorAll(".header__navlink");
