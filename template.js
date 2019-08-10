@@ -21,7 +21,7 @@ class webComponent extends HTMLElement {
     //script goes here...
   }
 }
-customElements.define("web-component", twebComponent);
+customElements.define("web-component", webComponent);
 
 //Add this to the HTML sheet
 <web-component></web-component>
